@@ -1,9 +1,12 @@
-@northover.Fluent
+import northover.*
+
+@Fluent
 class Examp {
-	int a
+	def a
 
-	public static void main(String[] args){
-		new Examp().setA(1)
+  public static void main(String[] args){
+    def x = new Examp().setA(1)
+    println x
 
-	}
+  }
 }

@@ -16,9 +16,9 @@
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="jdk" jdkName="JavaSE-1.6" jdkType="JavaSDK" />
-    <orderEntry type="library" exported="" name="GROOVY_SUPPORT" level="application" />
-    <orderEntry type="module-library">
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="library" name="GROOVY_SUPPORT" level="application" />
+    <orderEntry type="module-library" exported="">
       <library name="asm-3.3.jar">
         <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/asm-3.3.jar!/" />
@@ -27,7 +27,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library name="junit3">
         <CLASSES>
           <root url="jar://$APPLICATION_HOME_DIR$/lib/junit.jar!/" />
@@ -36,7 +36,11 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" exported="" name="groovy-1.8.0-beta-3" level="application" />
     <orderEntry type="library" name="groovy-1.8.0-beta-3" level="application" />
+    <annotation-paths>
+      <root url="file://$MODULE_DIR$/src/northover" />
+    </annotation-paths>
   </component>
 </module>
 

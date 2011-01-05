@@ -30,12 +30,9 @@ class FluentASTTransformation implements ASTTransformation {
 	}
 	
 	MethodNode createFluentSetter(PropertyNode prop){
-		//prop?.type?.componentType?.typeClass ?: Object
-		//def propclass = (!prop.type.isResolved() ? Object : prop.type.typeClass)
-		//def plain = prop.type.getPlainNodeReference()
-		
-		def propclass = (prop.type.componentType ? prop.type.typeClass : Object)
-		//def propclass = plain.typeClass
+      //Eclipse doesn't like 'getTypeClass' so let's provide an alternative
+      def propclass = prop.type.isResolved() ? prop.type.typeClass : Class.forName(prop.type.name)
+
 		builder.buildFromSpec{
 			method("set${prop.name.capitalize()}", ACC_PUBLIC, Object){
 				parameters { parameter 'parameter': propclass }
@@ -55,6 +52,6 @@ class FluentASTTransformation implements ASTTransformation {
 				}
 				annotations {}
 			}
-		}.first()
+		}.first() as MethodNode
 	}
 }
