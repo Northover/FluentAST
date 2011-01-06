@@ -6,6 +6,10 @@ import java.lang.annotation.Target;
 import java.lang.annotation.ElementType;
 import org.codehaus.groovy.transform.GroovyASTTransformationClass;
 
+/*
+*   @author Robert Northover
+*/
+
 @Retention(RetentionPolicy.SOURCE)
 @Target( [ElementType.TYPE] )
 @GroovyASTTransformationClass(["northover.FluentASTTransformation"])

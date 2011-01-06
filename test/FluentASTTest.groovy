@@ -1,5 +1,9 @@
 import northover.*
 
+/*
+*   @author Robert Northover
+*/
+
 class FluentASTTest extends GroovyTestCase {
 
     @Fluent
@@ -71,7 +75,7 @@ class FluentASTTest extends GroovyTestCase {
       shouldFail {new FluentExample().setG("Cannot Set Final")}
     }
 
-    void testMisMatch(){
+    void testIncompatibleType(){
         shouldFail{
             new FluentExample().setB("Not an Int")
         }
