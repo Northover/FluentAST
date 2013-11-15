@@ -1,0 +1,16 @@
+A simple AST transformation that automatically allows a user to modify an object's properties "fluidly."
+This effectively allows builder-like method chaining.
+
+For example:
+
+import northover.*
+
+@Fluent
+class Person{
+    def first
+    def last
+    int telephone
+}
+
+def person = new Person().setFirst("Joe").setLast("Smith").setTelephone(123456789)
+
